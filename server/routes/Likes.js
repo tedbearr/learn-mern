@@ -12,12 +12,11 @@ router.post("/", validateToken, async (req, res) => {
   });
   if (!found) {
     await Likes.create({ PostId: PostId, UserId: UserId });
-    res.json("Liked the post!");
+    res.json({ liked: true });
   } else {
     await Likes.destroy({ where: { PostId: PostId, UserId: UserId } });
-    res.json("Unliked the post!");
+    res.json({ liked: false });
   }
-  
 });
 
 module.exports = router;
