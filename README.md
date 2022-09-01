@@ -1,3 +1,3 @@
 # learn-mern
-CLIENT => REACT JS
+CLIENT => REACT JS,
 SERVER => NODE JS
